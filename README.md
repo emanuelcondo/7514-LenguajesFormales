@@ -16,10 +16,10 @@ Instalación de Intérprete Lisp
 Comandos de ejecución
 ===============================================================================
 * **Trabajo Práctico 1**:
-    > (load "tp1")
-    > (setq exp cargarExp1)
-    > (setq amb cargarAmb1)
-    > (evaluar exp amb)
+    >. (load "tp1")
+    >. (setq exp cargarExp1)
+    >. (setq amb cargarAmb1)
+    >. (evaluar exp amb)
 
 * **Trabajo Práctico 2**:
 
