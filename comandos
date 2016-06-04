@@ -1,0 +1,71 @@
+; TP1:Interprete TCL
+
+;(El programa cuenta con 3 ejemplos)
+(load "tp1")
+(setq exp cargarExp1)
+(setq amb cargarAmb1)
+(evaluar exp amb)
+
+;******************************************************************************************************************;
+; TP2:GPS
+
+;(El programa cuenta con 2 ejemplos)
+
+; Grafo1: Alrededores de la facultad
+
+; eeuu_bal = (EEUU,Balcarce)
+; ind_bal  = (Independencia,Balcarce
+; chi_bal  = (Chile,Balcarce)
+; eeuu_pc  = (EEUU,PaseoColon)
+; ind_pc   = (Independecia,PaseoColon)
+; chi_pc   = (Chile,PaseoColon)
+; eeuu_azop = (EEUU,Azopardo)
+; ind_pc   = (Independencia,PaseoColon)
+; chi_azop = (Chile,Azopardo)
+(load "tp2")
+(setq grafo cargarGrafo1)
+(gps 'eeuu_bal 'chi_azop grafo)        ; Devuelve todos los caminos posibles desde "eeuu_bal" hasta "chi_azop"
+(gps_minimo 'eeuu_bal 'chi_azop grafo) ; Devuelve el camino minimo desde "eeuu_bal" hasta "chi_azop"
+
+
+; Grafo2: Grafo visto en clase con nodos desde "a" hasta "e"
+
+; (a (b c) b (a d e) c (a d e) d (b c e) e (b c d))
+(setq grafo cargarGrafo3)
+(gps 'a 'd grafo)        ; Devuelve todos los caminos posibles desde "a" hasta "d"
+(gps_minimo 'a 'd grafo) ; Devuelve el camino minimo desde "a" hasta "d"
+
+;******************************************************************************************************************;
+; TP3:Interprete de C
+
+;(El programa cuenta con 2 ejemplos)
+; La entrada puede ser cualquiera
+(load "tp3")
+(setq prog cargarProg1)
+;prog = {((int a b = 5)
+;		 (main ((scanf a) 
+;		 	    (b = b + a) 
+;		 	    (printf a + b)
+;		 	    (if (a < b) ((printf b)) 
+;		 	     else ((printf a))
+;		 	    )
+;		  )
+;		 )
+;       }
+(run prog '(5 1))
+
+(setq prog cargarProg2)
+;prog = {((int a b = 5)
+;		  (main ((scanf a) 
+;		 	     (b = b + a) 
+;		 	     (printf a + b)
+;                (while (a < b) ((a ++) 
+;                                (printf a)
+;                               )
+;                )
+;		 	     (if (a == b) ((printf b + 89))) 
+;		 	    )
+;		  )
+;		 )
+;       }
+(run prog '(2 6 0))

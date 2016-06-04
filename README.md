@@ -2,7 +2,7 @@
 
 Trabajos Prácticos en Lenguaje Lisp
 
-* **Trabajo Práctico 1**: Desarrollar un intérprete de Lisp en Lisp para evaluar expresiones.
+* **Trabajo Práctico 1**: Desarrollar un intérprete de TLC en Lisp para evaluar expresiones.
 
 * **Trabajo Práctico 2**: Desarrollar un algoritmo en Lisp para encontrar camino mínimo entre
                           dos nodos.
@@ -31,3 +31,5 @@ Comandos de ejecución
     - (load "tp3")
     - (setq prog cargarProg1)
     - (run prog '(5 1))
+    
+Para más ejemplos, ver el archivo "comandos"
